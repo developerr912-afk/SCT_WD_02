@@ -1,0 +1,39 @@
+       body {
+            font-family: 'Inter', sans-serif;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .mono-digits {
+            font-family: 'JetBrains Mono', monospace;
+            font-variant-numeric: tabular-nums;
+        }
+        /* Custom scrollbar for lap history */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f111a;
+            border-radius: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #272b3d;
+            border-radius: 8px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f4460;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.25); }
+            50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.5); }
+        }
+        .running-glow {
+            animation: pulseGlow 2.5s infinite ease-in-out;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .running-glow {
+                animation: none;
+            }
+            * {
+                transition: none !important;
+            }
+        }
